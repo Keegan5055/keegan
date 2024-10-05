@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Keegan Kai</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="fotor-2024100316377.png">
+  <script>
+        // Get the audio element
+        const bgAudio = document.getElementById('bg-audio');
+
+// Function to play audio when there's a user interaction
+function enableAudioPlayback() {
+  bgAudio.play().catch(error => {
+    console.log("Autoplay was blocked, waiting for user interaction to resume.");
+  });
+  
+  // Remove event listener after the first interaction
+  document.removeEventListener('click', enableAudioPlayback);
+  document.removeEventListener('keydown', enableAudioPlayback);
+}
+
+// Listen for any click or keypress to trigger the audio play
+document.addEventListener('click', enableAudioPlayback);
+document.addEventListener('keydown', enableAudioPlayback);
+  </script>
+
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <!-- Background Audio -->
+  <audio autoplay loop id="bg-audio">
+    <source src="audio.mp3" type="audio/mp3">
+  </audio>
+  
+  <div class="avatar">
+    <header>
+      <img src="fotor-2024100316377.png" height="200px"width="200px">
+    </header>
+  </div>
+  <!-- Portfolio Content -->
+  <div class="portfolio-container">
+    <header>
+      <h1>Keegan Kai</h1>
+    </header>
+    
+    <section id="about">
+      <h2>Associate Admin Of Sus X Family</h2>
+      <p>SUSxFAMILY is a Community Server Based In Bangladesh.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Contact</h2>
+      <i class="fa-brands fa-discord" style="color: #1862e2;"></i>
+      <ul >
+        <li><a href="https://discord.gg/VN3pHqFw" style="color: white;text-shadow: 1px 1px 2px rgb(38, 54, 237), 0 0 25px rgb(48, 173, 201), 0 0 5px rgb(0, 169, 241);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">DISCORD</a></li>
+        <li><a href="mailto:gamerghost5055@gmail.com" style="color: white;text-shadow: 1px 1px 2px rgb(38, 54, 237), 0 0 25px rgb(48, 173, 201), 0 0 5px rgb(0, 169, 241);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">MAIL</a></li>
+        <li><a href="https://www.roblox.com/keegan5055" style="color: white;text-shadow: 1px 1px 2px rgb(38, 54, 237), 0 0 25px rgb(48, 173, 201), 0 0 5px rgb(0, 169, 241);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">ROBLOX</a></li>
+        <li><a href="https://t.me/keegan5055" style="color: white;text-shadow: 1px 1px 2px rgb(38, 54, 237), 0 0 25px rgb(48, 173, 201), 0 0 5px rgb(0, 169, 241);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">TELEGRAM</a></li>
+      </ul>
+
+    </section>
+
+    <footer>
+      
+      <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
+    </footer>
+  </div>
+</body>
+</html>
